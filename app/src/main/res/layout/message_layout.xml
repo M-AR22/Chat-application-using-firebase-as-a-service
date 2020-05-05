@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/message_single_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="10"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_weight="8">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/chatuser_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/blank_avatar" />
+
+        <TextView
+            android:id="@+id/message_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/chatuser_image"
+            android:background="@drawable/message_text_background"
+            android:padding="12dp"
+            android:layout_marginStart="5dp"
+            android:text="Text View"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/message_text"
+            android:layout_alignEnd="@+id/message_text"
+            android:text="seen"
+            android:id="@+id/message_seen"
+            android:visibility="gone">
+        </TextView>
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_weight="2"
+        android:background="@android:color/white"
+        android:src="@drawable/reply"
+        android:visibility="invisible"
+        android:clickable="false"
+        android:id="@+id/send_chat"></ImageButton>
+</LinearLayout>
+
